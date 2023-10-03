@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [solution URL](https://github.com/asmaahamid02/order-summary-component)
-- Live Site URL: [live site URL](https://your-live-site-url.com)
+- Live Site URL: [live site URL](https://asmaahamid02.github.io/order-summary-component/)
 
 ## My process
 
