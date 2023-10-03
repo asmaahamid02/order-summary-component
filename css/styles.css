@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700;800;900&display=swap');
+
+/*Reset*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Variables*/
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsla(223, 47%, 23%);
+  --active-color: hsl(245, 83%, 69%);
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  min-height: 100vh;
+  background-image: url('../assets/images/pattern-background-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  background-color: var(--pale-blue);
+  padding: 1em;
+  font-size: 16px;
+}
+
+/*Utils*/
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+/*main*/
+main {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 1.3em;
+  box-shadow: 0 6px 16px 0 hsla(245, 75%, 52%, 0.1);
+}
+
+.content {
+  padding: 2em;
+}
+
+.hero {
+  height: 10em;
+  width: 100%;
+  background-image: url('../assets/images/illustration-hero.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content > h1 {
+  color: var(--dark-blue);
+  text-align: center;
+  font-weight: 900;
+  margin-bottom: 1em;
+  font-size: 1.45em;
+}
+
+.content > p {
+  color: var(--desaturated-blue);
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.6em;
+  font-size: 0.95em;
+  padding: 0 1.5em;
+}
+
+.details {
+  background-color: var(--very-pale-blue);
+  margin: 2em auto;
+  border-radius: 1em;
+  padding: 1em;
+}
+
+.details-plan {
+  margin-left: 1.2em;
+}
+
+.details-plan > h3 {
+  color: var(--dark-blue);
+  line-height: 1.5em;
+  font-size: 0.92em;
+  font-weight: 900;
+}
+
+.details-plan > p {
+  color: var(--desaturated-blue);
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.btn {
+  border: 0;
+  outline: 0;
+  background: none;
+  font-weight: 800;
+  display: block;
+  font-size: 0.8em;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.change-btn {
+  color: var(--bright-blue);
+  text-decoration: underline;
+}
+
+.change-btn:hover {
+  text-decoration: none;
+  color: var(--active-color);
+}
+
+.primary-btn,
+.cancel-btn {
+  width: 100%;
+  text-align: center;
+  padding: 1.2em 0.5em;
+  letter-spacing: 0.05em;
+}
+
+.primary-btn {
+  background: var(--bright-blue);
+  color: #fff;
+  border-radius: 0.8em;
+  margin-bottom: 0.5em;
+  box-shadow: 0 6px 10px 7px hsl(247, 85%, 93%);
+}
+
+.primary-btn:hover {
+  background: var(--active-color);
+}
+
+.cancel-btn {
+  color: var(--desaturated-blue);
+}
+
+.cancel-btn:hover {
+  color: var(--dark-blue);
+}
+
+/*Media Queries*/
+@media only screen and (max-width: 345px) {
+  .content {
+    padding: 1em;
+  }
+
+  .content > h1 {
+    margin-bottom: 0.5em;
+  }
+
+  .content > p {
+    padding: 0 0.5em;
+  }
+
+  .details {
+    flex-direction: column;
+    gap: 1em;
+    margin: 1em auto;
+  }
+
+  .details-plan {
+    margin-left: 0;
+  }
+
+  .details-plan > h3,
+  .details-plan > p {
+    text-align: center;
+  }
+
+  .change-btn {
+    padding: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  body {
+    background-image: url('../assets/images/pattern-background-desktop.svg');
+  }
+
+  main {
+    max-width: 23.43em;
+  }
+}
